@@ -17,7 +17,7 @@ gameGrid = Grid()
 # Test --> gameGrid.grid[3][5] = 4
 # Test --> gameGrid.grid[17][8] = 7
 # Test --> gameGrid.printGrid()
-Block = LBlocks()
+block = LBlocks()
 
 while True:
     for event in pygame.event.get():
@@ -27,6 +27,7 @@ while True:
     # Drawing
     screen.fill(colorScreen)
     gameGrid.draw(screen)
+    block.draw(screen)
 
     pygame.display.update()
     clock.tick(fpsScreen)
