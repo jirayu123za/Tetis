@@ -23,6 +23,7 @@ gameGrid = Grid()
 # Test --> block = TBlocks()
 # Test --> block = ZBlocks()
 # Test --> block = SBlocks()
+# Test --> block.move(4,3)
 block = OBlocks()
 
 
