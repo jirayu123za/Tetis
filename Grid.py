@@ -1,4 +1,5 @@
 import pygame
+from Colors import Colors
 
 class Grid:
     def __init__(self):
@@ -6,7 +7,7 @@ class Grid:
         self.numCols = 10
         self.cellSize = 30
         self.grid = [[0 for i in range(self.numCols)] for j in range(self.numRows)]
-        self.colors = self.getCellColor()
+        self.colors = Colors.getCellColors()
 
     def printGrid(self):
         for row in range(self.numRows):
