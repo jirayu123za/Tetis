@@ -1,6 +1,7 @@
 import sys
 import pygame
 from Grid import Grid
+from Blocks import *
 
 pygame.init()
 colorScreen = (44,44,127)       # darkblue color
