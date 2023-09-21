@@ -17,7 +17,14 @@ gameGrid = Grid()
 # Test --> gameGrid.grid[3][5] = 4
 # Test --> gameGrid.grid[17][8] = 7
 # Test --> gameGrid.printGrid()
-block = LBlocks()
+# Test --> block = LBlocks()
+# Test --> block = JBlocks()
+# Test --> block = IBlocks()
+# Test --> block = TBlocks()
+# Test --> block = ZBlocks()
+# Test --> block = SBlocks()
+block = OBlocks()
+
 
 while True:
     for event in pygame.event.get():
