@@ -23,6 +23,7 @@
 
 ## Tools
 
-- pygame
+- Pygame
 - Visual Studio Code
 - Python
+- [Figma](https://www.figma.com/file/u9Npz2c1H1TfJOKaGncqNO/Untitled?type=design&node-id=0%3A1&mode=design&t=v1CAytjpCp9O0C8k-1)
