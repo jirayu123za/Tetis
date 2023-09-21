@@ -10,8 +10,8 @@ class Block:
         self.colors = Colors.getCellColors()
 
     def draw(self, screen):
-        titles = self.cells[self.rotationState]
-        for title in titles:
-            title_rect = pygame.Rect(title.cols * self.cellSize + 1, title.rows * self.cellSize + 1,
+        tiles = self.cells[self.rotationState]
+        for tile in tiles:
+            tile_rect = pygame.Rect(tile.cols * self.cellSize + 1, tile.rows * self.cellSize + 1,
                                     self.cellSize - 1, self.cellSize - 1)
-            pygame.draw.rect(screen, self.colors[self.id], title_rect)
+            pygame.draw.rect(screen, self.colors[self.id], tile_rect)
