@@ -10,6 +10,7 @@ class LBlocks(Block):
             2: [Position(1, 0), Position(1, 1), Position(1, 2), Position(2, 0)],
             3: [Position(0, 0), Position(0, 1), Position(1, 1), Position(2, 1)]
         }
+        self.move(0,3)
 
 class JBlocks(Block):
     def __init__(self):
@@ -20,6 +21,7 @@ class JBlocks(Block):
             2: [Position(1, 0), Position(1, 1), Position(1, 2), Position(2, 2)],
             3: [Position(0, 1), Position(1, 1), Position(2, 0), Position(2, 1)]
         }
+        self.move(0,3)
 
 class IBlocks(Block):
     def __init__(self):
@@ -30,6 +32,7 @@ class IBlocks(Block):
             2: [Position(2, 0), Position(2, 1), Position(2, 2), Position(2, 3)],
             3: [Position(0, 0), Position(0, 1), Position(1, 1), Position(2, 1)]
         }
+        self.move(-1,3)
 
 class TBlocks(Block):
     def __init__(self):
@@ -40,6 +43,7 @@ class TBlocks(Block):
             2: [Position(1, 0), Position(1, 1), Position(1, 2), Position(2, 1)],
             3: [Position(0, 1), Position(1, 0), Position(1, 1), Position(2, 1)]
         }
+        self.move(0,3)
 
 class ZBlocks(Block):
     def __init__(self):
@@ -50,6 +54,7 @@ class ZBlocks(Block):
             2: [Position(1, 0), Position(1, 1), Position(2, 1), Position(2, 2)],
             3: [Position(0, 1), Position(1, 0), Position(1, 1), Position(2, 0)]
         }
+        self.move(0,3)
 
 class SBlocks(Block):
     def __init__(self):
@@ -60,6 +65,7 @@ class SBlocks(Block):
             2: [Position(1, 1), Position(1, 2), Position(2, 0), Position(2, 1)],
             3: [Position(0, 0), Position(1, 0), Position(1, 1), Position(2, 1)]
         }
+        self.move(0,3)
 
 class OBlocks(Block):
     def __init__(self):
@@ -70,3 +76,4 @@ class OBlocks(Block):
             2: [Position(0, 0), Position(0, 1), Position(1, 0), Position(1, 1)],
             3: [Position(0, 0), Position(0, 1), Position(1, 0), Position(1, 1)]
         }
+        self.move(0,4)
