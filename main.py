@@ -3,9 +3,11 @@ import pygame
 from Grid import Grid
 
 pygame.init()
-colorScreen = (44,44,127)   # darkblue color
+colorScreen = (44,44,127)       # darkblue color
+resolutionScreen = (300,600)    # display resolution
+fpsScreen = (60)                # display FPS
 
-screen = pygame.display.set_mode((300, 600))
+screen = pygame.display.set_mode((resolutionScreen))
 pygame.display.set_caption("Game Tetris")
 clock = pygame.time.Clock()
 
@@ -25,4 +27,4 @@ while True:
     gameGrid.draw(screen)
 
     pygame.display.update()
-    clock.tick(60)
+    clock.tick(fpsScreen)
