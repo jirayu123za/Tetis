@@ -6,6 +6,8 @@ class Block:
         self.id = id
         self.cells = {}
         self.cellSize = 30
+        self.rowOffset = 0
+        self.colOffset = 0
         self.rotationState = 0
         self.colors = Colors.getCellColors()
 
