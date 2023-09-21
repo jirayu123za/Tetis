@@ -11,6 +11,10 @@ class Block:
         self.rotationState = 0
         self.colors = Colors.getCellColors()
 
+    def move(self, row, col):
+        self.rowOffset += row
+        self.colOffset += col
+
     def draw(self, screen):
         tiles = self.cells[self.rotationState]
         for tile in tiles:
