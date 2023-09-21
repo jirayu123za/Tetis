@@ -13,10 +13,11 @@ pygame.display.set_caption("Game Tetris")
 clock = pygame.time.Clock()
 
 gameGrid = Grid()
-gameGrid.grid[0][0] = 1
-gameGrid.grid[3][5] = 4
-gameGrid.grid[17][8] = 7
-gameGrid.printGrid()
+# Test --> gameGrid.grid[0][0] = 1
+# Test --> gameGrid.grid[3][5] = 4
+# Test --> gameGrid.grid[17][8] = 7
+# Test --> gameGrid.printGrid()
+Block = LBlocks()
 
 while True:
     for event in pygame.event.get():
