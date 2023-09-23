@@ -18,6 +18,16 @@ class Game:
         self.blocks.remove(Block)
         return Block
         
+    def moveLeft(self):
+        self.currentBlock.move(0, -1)
+
+    def moveRight(self):
+        self.currentBlock.move(0, 1)
+
+    def moveDown(self):
+        self.currentBlock.move(1, 0)
+
+
     def draw(self, screen):
         self.grid.draw(screen)
         self.currentBlock.draw(screen)
