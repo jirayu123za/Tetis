@@ -30,7 +30,7 @@ class Game:
 
     def moveDown(self):
         self.currentBlock.move(1, 0)
-        if self.blockInside() == False:
+        if self.blockInside() == False or self.blockFit() == False:
             self.currentBlock.move(-1, 0)
             self.lockBlock()
     
@@ -46,6 +46,13 @@ class Game:
         for tile in tile:
                 if self.grid.isInside(tile.row, tile.col) == False:
                     return False
+        return True
+
+    def blockFits(self):
+        tiles = self.currentBlock.getCellPosition()
+        for tile in tiles:
+            if self.grid.isEmpty(tile.row, tile.col) == False:
+                return False
         return True
 
     def rotate(self):
