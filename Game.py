@@ -20,14 +20,24 @@ class Game:
         
     def moveLeft(self):
         self.currentBlock.move(0, -1)
+        if self.blockInside() == False:
+            self.currentBlock.move(0,1)
 
     def moveRight(self):
         self.currentBlock.move(0, 1)
+        if self.blockInside() == False:
+            self.currentBlock.move(0, -1)
 
     def moveDown(self):
         self.currentBlock.move(1, 0)
+        if self.blockInside() == False:
+            self.currentBlock.move(-1, 0)
 
     def blockInside(self):
+        tile = self.currentBlock.getCellPosition()
+        for tile in tile:
+                if self.grid.isInside(tile.row, tile.col) == False:
+                    return False
         return True
 
 
