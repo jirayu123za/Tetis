@@ -35,6 +35,14 @@ while True:
             pygame.quit()
             sys.exit()
 
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                Game.moveLeft()
+            if event.key == pygame.K_RIGHT:
+                Game.moveRight()
+            if event.key == pygame.K_DOWN:
+                Game.moveDown()
+
     # Drawing
     screen.fill(colorScreen)
     # gameGrid.draw(screen)
