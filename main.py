@@ -14,6 +14,9 @@ pygame.display.set_caption("Game Tetris")
 clock = pygame.time.Clock()
 
 Game = Game()
+GAME_UPDATE = pygame.USEREVENT
+pygame.time.set_timer(GAME_UPDATE, 200)
+
 # gameGrid = Grid()
 # Test --> gameGrid.grid[0][0] = 1
 # Test --> gameGrid.grid[3][5] = 4
@@ -44,6 +47,8 @@ while True:
                 Game.moveDown()
             if event.key == pygame.K_UP:
                 Game.rotate()
+        if event.type == GAME_UPDATE:
+            Game.moveDown()
 
     # Drawing
     screen.fill(colorScreen)
