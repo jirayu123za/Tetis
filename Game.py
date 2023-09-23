@@ -40,6 +40,8 @@ class Game:
                     return False
         return True
 
+    def rotate(self):
+        self.currentBlock.rotate()
 
     def draw(self, screen):
         self.grid.draw(screen)
