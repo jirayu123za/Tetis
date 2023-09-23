@@ -30,7 +30,7 @@ class Game:
 
     def moveDown(self):
         self.currentBlock.move(1, 0)
-        if self.blockInside() == False or self.blockFit() == False:
+        if self.blockInside() == False or self.blockFits() == False:
             self.currentBlock.move(-1, 0)
             self.lockBlock()
     
