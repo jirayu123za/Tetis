@@ -42,6 +42,8 @@ class Game:
 
     def rotate(self):
         self.currentBlock.rotate()
+        if self.blockInside() == False:
+            self.currentBlock.undoRotation()
 
     def draw(self, screen):
         self.grid.draw(screen)
