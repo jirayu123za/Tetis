@@ -1,7 +1,8 @@
 import sys
 import pygame
-from Grid import Grid
-from Blocks import *
+# from Grid import Grid
+# from Blocks import *
+from Game import Game
 
 pygame.init()
 colorScreen = (44,44,127)       # darkblue color
@@ -12,7 +13,8 @@ screen = pygame.display.set_mode((resolutionScreen))
 pygame.display.set_caption("Game Tetris")
 clock = pygame.time.Clock()
 
-gameGrid = Grid()
+Game = Game()
+# gameGrid = Grid()
 # Test --> gameGrid.grid[0][0] = 1
 # Test --> gameGrid.grid[3][5] = 4
 # Test --> gameGrid.grid[17][8] = 7
@@ -24,7 +26,7 @@ gameGrid = Grid()
 # Test --> block = ZBlocks()
 # Test --> block = SBlocks()
 # Test --> block.move(4,3)
-block = OBlocks()
+# block = OBlocks()
 
 
 while True:
@@ -32,10 +34,12 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+
     # Drawing
     screen.fill(colorScreen)
-    gameGrid.draw(screen)
-    block.draw(screen)
+    # gameGrid.draw(screen)
+    # block.draw(screen)
+    Game.draw(screen)
 
     pygame.display.update()
     clock.tick(fpsScreen)
