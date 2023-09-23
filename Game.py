@@ -32,6 +32,14 @@ class Game:
         self.currentBlock.move(1, 0)
         if self.blockInside() == False:
             self.currentBlock.move(-1, 0)
+            self.lockBlock()
+    
+    def lockBlock(self):
+        tiles = self.currentBlock.getCellPosition()
+        for position in tiles:
+            self.grid.grid[position.row][position.col] = self.currentBlock.id
+        self.currentBlock = self.nextBlock
+        self.nextBlock = self.getRandomBlocks()
 
     def blockInside(self):
         tile = self.currentBlock.getCellPosition()
