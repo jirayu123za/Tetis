@@ -20,6 +20,11 @@ class Grid:
             return True
         return False
     
+    def isEmpty(self, row, col):
+        if self.grid[row][col] == 0:
+            return True
+        return False
+
     def draw(self, screen):
         for row in range(self.numRows):
             for col in range(self.numCols):
