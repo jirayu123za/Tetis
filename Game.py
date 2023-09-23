@@ -27,6 +27,9 @@ class Game:
     def moveDown(self):
         self.currentBlock.move(1, 0)
 
+    def blockInside(self):
+        return True
+
 
     def draw(self, screen):
         self.grid.draw(screen)
