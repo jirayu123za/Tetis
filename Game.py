@@ -20,12 +20,12 @@ class Game:
         
     def moveLeft(self):
         self.currentBlock.move(0, -1)
-        if self.blockInside() == False:
+        if self.blockInside() == False or self.blockFits() == False:
             self.currentBlock.move(0,1)
 
     def moveRight(self):
         self.currentBlock.move(0, 1)
-        if self.blockInside() == False:
+        if self.blockInside() == False or self.blockFits() == False:
             self.currentBlock.move(0, -1)
 
     def moveDown(self):
@@ -57,7 +57,7 @@ class Game:
 
     def rotate(self):
         self.currentBlock.rotate()
-        if self.blockInside() == False:
+        if self.blockInside() == False or self.blockFits() == False:
             self.currentBlock.undoRotation()
 
     def draw(self, screen):
