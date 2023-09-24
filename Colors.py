@@ -8,6 +8,7 @@ class Colors:
     cyan = (21, 204, 209)
     blue = (13, 64, 216)
     white = (255,255,255)
+    lightBlue = (59, 85, 162)
     colorScreen = (44,44,127)
 
     @classmethod
