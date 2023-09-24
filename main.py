@@ -1,11 +1,10 @@
 import sys
 import pygame
-# from Grid import Grid
-# from Blocks import *
+
 from Game import Game
+from Colors import Colors
 
 pygame.init()
-colorScreen = (44,44,127)       # darkblue color
 resolutionScreen = (500, 620)    # display resolution
 fpsScreen = (60)                # display FPS
 
@@ -16,21 +15,6 @@ clock = pygame.time.Clock()
 Game = Game()
 GAME_UPDATE = pygame.USEREVENT
 pygame.time.set_timer(GAME_UPDATE, 200)
-
-# gameGrid = Grid()
-# Test --> gameGrid.grid[0][0] = 1
-# Test --> gameGrid.grid[3][5] = 4
-# Test --> gameGrid.grid[17][8] = 7
-# Test --> gameGrid.printGrid()
-# Test --> block = LBlocks()
-# Test --> block = JBlocks()
-# Test --> block = IBlocks()
-# Test --> block = TBlocks()
-# Test --> block = ZBlocks()
-# Test --> block = SBlocks()
-# Test --> block.move(4,3)
-# block = OBlocks()
-
 
 while True:
     for event in pygame.event.get():
@@ -53,9 +37,7 @@ while True:
             Game.moveDown()
 
     # Drawing
-    screen.fill(colorScreen)
-    # gameGrid.draw(screen)
-    # block.draw(screen)
+    screen.fill(Colors.colorScreen)
     Game.draw(screen)
 
     pygame.display.update()
