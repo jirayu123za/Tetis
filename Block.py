@@ -32,7 +32,7 @@ class Block:
 
     def undoRotation(self):
         self.rotationState -= 1
-        if self.rotationState == 0:
+        if self.rotationState == -1:
             self.rotationState = len(self.cells) - 1
 
     def draw(self, screen, offsetX, offsetY):
