@@ -49,15 +49,20 @@ while True:
             Game.moveDown()
 
     # Drawing
+    scorePointsSurface = titleFront.render(str(Game.score), True, Colors.white)
     screen.fill(Colors.colorScreen)
     screen.blit(scoreSurface, (365, 20, 50, 50))
     screen.blit(nextSurface, (375, 180, 50, 50))
-
-    if Game.gameOver == True:                                       # check if the game is over show the game over surface
+    
+    if Game.gameOver == True:                                               # check if the game is over show the game over surface
         screen.blit(gameOverSurface, (320, 450, 50,50))
 
     pygame.draw.rect(screen, Colors.lightBlue, scoreRect, 0, 10)
     pygame.draw.rect(screen, Colors.lightBlue, nextRect, 0, 10)
+    screen.blit(scorePointsSurface,
+                scorePointsSurface.get_rect(centerx = scoreRect.centerx,
+                                            centery = scoreRect.centery))
+    
     Game.draw(screen)
 
     pygame.display.update()
