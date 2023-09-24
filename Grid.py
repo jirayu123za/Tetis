@@ -24,6 +24,12 @@ class Grid:
         if self.grid[row][col] == 0:
             return True
         return False
+    
+    def isRowFull(self, row):
+        for col in range(self.numCols):
+            if self.grid[row][col] == 0:
+                return False
+        return True
 
     def draw(self, screen):
         for row in range(self.numRows):
