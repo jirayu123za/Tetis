@@ -50,6 +50,10 @@ class Grid:
                 self.moveRowDown(row, completed)
         return completed
 
+    def reset(self):
+        for row in range(self.numRows):
+            for col in range(self.numCols):
+                self.grid[row][col] = 0
 
     def draw(self, screen):
         for row in range(self.numRows):
