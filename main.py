@@ -8,7 +8,6 @@ pygame.init()
 resolutionScreen = (500, 620)           # display resolution
 fpsScreen = (60)                        # display FPS
 titleFront = pygame.font.Font(None, 40) # font and size for title
-        
 
 scoreSurface = titleFront.render("Score", True, Colors.white)       # interface score
 scoreRect = pygame.Rect(320, 55, 170, 60)
