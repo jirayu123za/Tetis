@@ -9,6 +9,7 @@ class Game:
                         OBlocks(), SBlocks(), TBlocks(), ZBlocks()]
         self.currentBlock = self.getRandomBlocks()
         self.nextBlock = self.getRandomBlocks()
+        self.gameOver = False
 
     def getRandomBlocks(self):
         if len(self.blocks) == 0:
@@ -41,6 +42,9 @@ class Game:
         self.currentBlock = self.nextBlock
         self.nextBlock = self.getRandomBlocks()
         self.grid.clearFullRow()
+        if self.blockFits() == False:
+            self.gameOver = True
+
 
     def blockInside(self):
         tile = self.currentBlock.getCellPosition()
