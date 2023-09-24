@@ -30,6 +30,10 @@ class Grid:
             if self.grid[row][col] == 0:
                 return False
         return True
+    
+    def clearRow(self, row):
+        for col in range(self.numCols):
+            self.grid[row][col] = 0
 
     def draw(self, screen):
         for row in range(self.numRows):
