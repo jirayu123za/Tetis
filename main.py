@@ -16,6 +16,8 @@ scoreRect = pygame.Rect(320, 55, 170, 60)
 nextSurface = titleFront.render("Next", True, Colors.white)         # interface next blocks
 nextRect = pygame.Rect(320, 215, 170, 180)
 
+gameOverSurface = titleFront.render("Game Over", True, Colors.white) # interface game over
+
 screen = pygame.display.set_mode((resolutionScreen))
 pygame.display.set_caption("Game Tetris")
 
@@ -49,6 +51,10 @@ while True:
     screen.fill(Colors.colorScreen)
     screen.blit(scoreSurface, (365, 20, 50, 50))
     screen.blit(nextSurface, (375, 180, 50, 50))
+
+    if Game.gameOver == True:                                       # check if the game is over show the game over surface
+        screen.blit(gameOverSurface, (320, 450, 50,50))
+
     pygame.draw.rect(screen, Colors.lightBlue, scoreRect, 0, 10)
     pygame.draw.rect(screen, Colors.lightBlue, nextRect, 0, 10)
     Game.draw(screen)
