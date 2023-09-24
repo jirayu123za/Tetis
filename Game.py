@@ -45,6 +45,8 @@ class Game:
         if self.blockFits() == False:
             self.gameOver = True
 
+    def reset(self):
+        self.grid.reset()
 
     def blockInside(self):
         tile = self.currentBlock.getCellPosition()
