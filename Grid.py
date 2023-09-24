@@ -35,6 +35,11 @@ class Grid:
         for col in range(self.numCols):
             self.grid[row][col] = 0
 
+    def moveRowDown(self, row, numRows):
+        for col in range(self.numCols):
+            self.grid[row + numRows][col] = self.grid[row][col]
+            self.grid[row][col]
+
     def draw(self, screen):
         for row in range(self.numRows):
             for col in range(self.numCols):
