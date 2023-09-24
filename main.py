@@ -40,7 +40,7 @@ while True:
         if event.type == pygame.KEYDOWN:
             if Game.gameOver == True:
                 Game.gameOver = False
-                Game.reset
+                Game.reset()
             if event.key == pygame.K_LEFT and Game.gameOver == False:
                 Game.moveLeft()
             if event.key == pygame.K_RIGHT and Game.gameOver == False:
