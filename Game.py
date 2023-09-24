@@ -51,7 +51,8 @@ class Game:
             self.grid.grid[position.row][position.col] = self.currentBlock.id
         self.currentBlock = self.nextBlock
         self.nextBlock = self.getRandomBlocks()
-        self.grid.clearFullRow()
+        rowCleared = self.grid.clearFullRow()
+        self.updateScore(rowCleared, 0)
         if self.blockFits() == False:
             self.gameOver = True
 
@@ -61,6 +62,7 @@ class Game:
                         OBlocks(), SBlocks(), TBlocks(), ZBlocks()]
         self.currentBlock = self.getRandomBlocks()
         self.nextBlock = self.getRandomBlocks()
+        self.score = 0
 
     def blockInside(self):
         tile = self.currentBlock.getCellPosition()
