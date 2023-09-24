@@ -6,7 +6,7 @@ from Game import Game
 
 pygame.init()
 colorScreen = (44,44,127)       # darkblue color
-resolutionScreen = (300,600)    # display resolution
+resolutionScreen = (500, 620)    # display resolution
 fpsScreen = (60)                # display FPS
 
 screen = pygame.display.set_mode((resolutionScreen))
