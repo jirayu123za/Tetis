@@ -47,6 +47,10 @@ class Game:
 
     def reset(self):
         self.grid.reset()
+        self.blocks = [IBlocks(), JBlocks(), LBlocks(),
+                        OBlocks(), SBlocks(), TBlocks(), ZBlocks()]
+        self.currentBlock = self.getRandomBlocks()
+        self.nextBlock = self.getRandomBlocks()
 
     def blockInside(self):
         tile = self.currentBlock.getCellPosition()
