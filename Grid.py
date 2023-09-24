@@ -39,6 +39,17 @@ class Grid:
         for col in range(self.numCols):
             self.grid[row + numRows][col] = self.grid[row][col]
             self.grid[row][col]
+    
+    def clearFullRow(self):
+        completed = 0
+        for row in range(self.numRows - 1, 0, -1):
+            if self.isRowFull(row):
+                self.clearFullRow(row)
+                completed += 1
+            elif completed > 0:
+                self.moveRowDown(row, completed)
+        return completed
+
 
     def draw(self, screen):
         for row in range(self.numRows):
