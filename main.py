@@ -6,10 +6,15 @@ from Colors import Colors
 
 pygame.init()
 resolutionScreen = (500, 620)    # display resolution
-fpsScreen = (60)                # display FPS
+fpsScreen = (60)                 # display FPS
+
+titleFront = pygame.font.Font(None, 40)                             # interface score
+scoreSurface = titleFront.render("Score", True, Colors.white)
+scoreRect = pygame.Rect(320, 55, 170, 60)
 
 screen = pygame.display.set_mode((resolutionScreen))
 pygame.display.set_caption("Game Tetris")
+
 clock = pygame.time.Clock()
 
 Game = Game()
@@ -38,6 +43,8 @@ while True:
 
     # Drawing
     screen.fill(Colors.colorScreen)
+    screen.blit(scoreSurface, (365, 20, 50, 50))
+    pygame.draw.rect(screen, Colors.lightBlue, scoreRect, 0, 10)
     Game.draw(screen)
 
     pygame.display.update()
