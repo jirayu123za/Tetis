@@ -39,15 +39,15 @@ while True:
             sys.exit()
 
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_LEFT:
+            if event.key == pygame.K_LEFT and Game.gameOver == False:
                 Game.moveLeft()
-            if event.key == pygame.K_RIGHT:
+            if event.key == pygame.K_RIGHT and Game.gameOver == False:
                 Game.moveRight()
-            if event.key == pygame.K_DOWN:
+            if event.key == pygame.K_DOWN and Game.gameOver == False:
                 Game.moveDown()
-            if event.key == pygame.K_UP:
+            if event.key == pygame.K_UP and Game.gameOver == False:
                 Game.rotate()
-        if event.type == GAME_UPDATE:
+        if event.type == GAME_UPDATE and Game.gameOver == False:
             Game.moveDown()
 
     # Drawing
