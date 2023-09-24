@@ -10,6 +10,16 @@ class Game:
         self.currentBlock = self.getRandomBlocks()
         self.nextBlock = self.getRandomBlocks()
         self.gameOver = False
+        self.score = 0
+    
+    def updateScore(self, lineCleared, moveDownPoints):
+        if lineCleared == 1:
+            self.score += 100
+        elif lineCleared == 2:
+            self.score += 300
+        elif lineCleared == 3:
+            self.score += 500
+        self.score += moveDownPoints
 
     def getRandomBlocks(self):
         if len(self.blocks) == 0:
