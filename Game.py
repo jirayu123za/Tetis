@@ -40,6 +40,7 @@ class Game:
             self.grid.grid[position.row][position.col] = self.currentBlock.id
         self.currentBlock = self.nextBlock
         self.nextBlock = self.getRandomBlocks()
+        self.grid.clearFullRow()
 
     def blockInside(self):
         tile = self.currentBlock.getCellPosition()
